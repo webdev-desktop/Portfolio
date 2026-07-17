@@ -8,7 +8,7 @@
     "liveLink": "https://webdevzone.in",
     "githubLink": "https://github.com/webdev-desktop",
     "codeSnippet": "export default async function ProjectsPage() {\n  const projects = await getProjects();\n\n  return (\n    <section>\n      {projects.map((project) => (\n        <ProjectCard key={project.title} {...project} />\n      ))}\n    </section>\n  );\n}",
-    "imageSrc": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784200591/cb2bb88f-c560-44f5-9cc8-05b3ed902c45.png",
+    "imageSrc": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784299014/cb2bb88f-c560-44f5-9cc8-05b3ed902c45.png",
     "featured": true
   },
   {

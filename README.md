@@ -48,9 +48,9 @@ This portfolio represents my work, passion for web development, and continuous l
 
 ## 📸 Screenshots
 
-📸 ![Desktop Preview](https://res.cloudinary.com/wqudj3ub/image/upload/v1784200591/cb2bb88f-c560-44f5-9cc8-05b3ed902c45.png)
+📸 ![Desktop Preview](https://res.cloudinary.com/wqudj3ub/image/upload/v1784299014/cb2bb88f-c560-44f5-9cc8-05b3ed902c45.png)
 
-📸 ![Mobile Preview](https://res.cloudinary.com/wqudj3ub/image/upload/v1784291428/Apurv%20Portfolio%20Mobile.png)
+📸 ![Mobile Preview](https://res.cloudinary.com/wqudj3ub/image/upload/v1784299363/Apurv%20Portfolio%20Mobile.png)
 
 ---
 
