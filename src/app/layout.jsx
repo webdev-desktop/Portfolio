@@ -1,4 +1,3 @@
-// "use client";
 import Header from "@/components/layout/Header";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar.jsx";
