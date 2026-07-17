@@ -1,0 +1,66 @@
+{
+  "academicData": [
+    {
+      "duration": "2022 - 2025",
+      "degree": "Bachelor of Science in Information Technology (B.Sc. I.T.)",
+      "institution": "SKM Jashbhai Maganbhai Patel College of Commerce, Goregaon West",
+      "metrics": "Score: 65.76%",
+      "description": "Studied core concepts of programming, database management systems, computer networks, software engineering, and web development fundamentals while building a strong foundation in information technology.",
+      "techKey": "education"
+    },
+    {
+      "duration": "2020 - 2022",
+      "degree": "Higher Secondary Certificate (12th Standard - Commerce)",
+      "institution": "SKM Smt. K. D. Nagda JR. College of Commerce, Goregaon West",
+      "metrics": "Score: 43.33%",
+      "description": "Developed analytical, problem-solving, and communication skills through subjects including Accountancy, Economics, Business Studies, and Mathematics.",
+      "techKey": "profile"
+    },
+    {
+      "duration": "2019 - 2020",
+      "degree": "Secondary School Certificate (10th Standard)",
+      "institution": "Vidya Vardhini Sanstha Sanchalit Vidya Mandir, Goregaon West",
+      "metrics": "Score: 71.80%",
+      "description": "Built a strong academic foundation in Mathematics, Science, and Languages while developing logical thinking and problem-solving abilities.",
+      "techKey": "school"
+    }
+  ],
+  "coursesData": [
+    {
+      "title": "CCC (Course on Computer Concepts)",
+      "institute": "ICIT (NIELIT Authorized)",
+      "duration": "2022 (Certified)",
+      "metrics": "Grade: D (54% Score)",
+      "techKey": "certificates",
+      "details": [
+        "Computer Fundamentals and Operating Systems",
+        "Word Processing and Presentation Tools",
+        "Internet and Digital Communication Basics"
+      ]
+    },
+    {
+      "title": "Certificate Course in Tally ERP 9",
+      "institute": "ICIT Institute",
+      "duration": "2022 (Certified)",
+      "metrics": "Grade: A+ (96% Score)",
+      "techKey": "briefcase",
+      "details": [
+        "Accounting and Ledger Management",
+        "GST and Taxation Fundamentals",
+        "Inventory and Voucher Management"
+      ]
+    },
+    {
+      "title": "Certificate Course in MS-Office",
+      "institute": "ICIT Institute",
+      "duration": "2021 (Certified)",
+      "metrics": "Grade: A+ (98% Score)",
+      "techKey": "office",
+      "details": [
+        "Advanced Microsoft Excel Functions",
+        "Document Creation with MS Word",
+        "Professional Presentations using PowerPoint"
+      ]
+    }
+  ]
+}

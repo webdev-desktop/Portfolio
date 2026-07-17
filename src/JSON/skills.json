@@ -1,0 +1,38 @@
+{
+  "developmentSkills": [
+    { "name": "Next.js", "color": "text-white", "iconKey": "nextjs" },
+    { "name": "React.js", "color": "text-sky-400", "iconKey": "react" },
+    {
+      "name": "JavaScript",
+      "color": "text-yellow-400",
+      "iconKey": "javaScript"
+    },
+    { "name": "Tailwind CSS", "color": "text-cyan-400", "iconKey": "tailwind" },
+    { "name": "CSS3", "color": "text-blue-500", "iconKey": "css" },
+    { "name": "HTML5", "color": "text-orange-500", "iconKey": "html" }
+  ],
+
+  "backendDatabaseSkills": [
+    { "name": "Node.js", "color": "text-emerald-500", "iconKey": "nodejs" },
+    { "name": "Express.js", "color": "text-muted", "iconKey": "express" },
+    { "name": "MongoDB", "color": "text-emerald-500", "iconKey": "mongodb" },
+    { "name": "MySQL", "color": "text-sky-400", "iconKey": "sql" },
+    { "name": "REST API", "color": "text-sky-400", "iconKey": "api" },
+    { "name": "Postman API", "color": "text-orange-400", "iconKey": "postman" }
+  ],
+
+  "genericToolsSkills": [
+    { "name": "Git", "color": "text-orange-600", "iconKey": "git" },
+    { "name": "GitHub", "color": "text-white", "iconKey": "github" },
+    { "name": "VS Code", "color": "text-blue-500", "iconKey": "vscode" },
+    { "name": "Figma", "color": "text-pink-500", "iconKey": "figma" },
+    { "name": "Netlify", "color": "text-cyan-500", "iconKey": "netlify" },
+    {
+      "name": "Tally ERP 9",
+      "color": "text-amber-600",
+      "iconKey": "briefcase"
+    },
+    { "name": "MS Excel", "color": "text-emerald-600", "iconKey": "excel" },
+    { "name": "MS Word", "color": "text-blue-600", "iconKey": "word" }
+  ]
+}

@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+/*! ========================= 2. GLOBAL CUSTOM THEME ========================= **/
+@theme {
+  /*? =========================1. BASE CONTAINER & BACKGROUND COLORS ========================= **/
+  --color-bg-primary: #1a1e24;
+  --color-bg-tooltip: #0b0f17;
+
+  /*? ========================= 2. BRAND & ACCENT COLORS (PREMIUM NEON SYSTEM) ========================= **/
+  --color-brand-cyan: #12f7d6;
+  --color-brand-hover: #98faec;
+  --color-brand-glow: #12f7d6;
+  --color-brand-cyan-light: #5dfce7;
+
+  /*? ========================= 3. TEXT TYPOGRAPHY COLORS ========================= **/
+  --color-text-main: #ffffff;
+  --color-text-muted: #94a3b8;
+
+  /*? ========================= 4. BORDERS, HOVERS & CYBER SURFACES ========================= **/
+  --color-border-subtle: #334155;
+  --color-bg-hover-dim: #1e293bb3;
+
+  /*? ========================= 5. PREMIUM UTILITY UTILITIES (GLASSMORPHISM & GLOWS) ========================= **/
+  --shadow-nav-glow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+  --shadow-input-focus: 0 0 15px 0 rgba(18, 247, 214, 0.15);
+
+  /*? ========================= 6. Font Family Registrations ========================= **/
+  --font-ubuntu: "var(--font-ubuntu)", sans-serif;
+  --font-mono: "var(--font-mono)", monospace;
+}
+
+/*! ========================= 2. GLOBAL CUSTOM UTILITIES & OVERRIDES ========================= **/
+@layer utilities {
+  /*? ========================= Futuristic Smooth Dynamic Scrollbar for Overflows & Text areas ========================= **/
+  /** Input Filed To floating Label Start*/
+
+  .dynamic-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  .dynamic-scrollbar::-webkit-scrollbar-track {
+    background: rgba(26, 30, 36, 0.5);
+    border-radius: 10px;
+  }
+
+  .dynamic-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--color-border-subtle);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+  }
+
+  .dynamic-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-cyan);
+    box-shadow: 0 0 8px var(--color-brand-cyan);
+  }
+  /** Input Filed To floating Label End*/
+
+  /*? ========================= Image Floating Animation ========================= **/
+  /** Image Floating Animation Start  */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+  /** Image Floating Animation End  */
+
+  /*? ========================= Toaster Floating Animation ========================= **/
+  /** Toaster Floating Animation Start  */
+  @keyframes toastIn {
+    from {
+      opacity: 0;
+      transform: translateX(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes toastProgress {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+  /** Toaster Floating Animation End  */
+}
+
+/*! ========================= Reset baseline tags for better dark mode rendering ========================= **/
+
+body {
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-main);
+  font-family: var(--font-ubuntu);
+  overflow-x: hidden;
+}

@@ -1,0 +1,21 @@
+{
+  "logoName": "Webdev",
+  "name": "Apurv Tanaji Londhe",
+  "developerType": "Full Stack",
+  "mobile": "7400411586",
+  "email": "webdev.desktop01@gmail.com",
+  "location": "Jawahar Nagar, Goregaon West, Mumbai",
+  "workType": "Open to Work",
+  "experience": "Fresher",
+  "specializedTags": ["MERN Stack", "Next JS"],
+  "bio": "I build modern, responsive, and user-friendly web applications using the MERN stack and Next.js. I enjoy turning ideas into real-world digital experiences and continuously improving my development skills.",
+  "about": "I am a self-taught Full Stack Developer passionate about creating modern and scalable web applications. My primary expertise includes HTML, CSS, Tailwind CSS, JSON, JavaScript, React, Next.js, Node.js, Express.js, and MongoDB. I enjoy building projects that solve real problems and help me grow as a developer. I believe in writing clean, maintainable code and continuously learning new technologies. Currently, I am focused on strengthening my full-stack development skills, building production-ready projects, and preparing for professional opportunities in the software industry.",
+  "profile": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784220550/avatar_uiuwxo.jpg",
+  "aboutProfile": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784220552/avatar_g3vxgj.png",
+  "resume": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784199835/Apurv_Resume_qfz2qe.pdf",
+  "socialLinks": {
+    "github": "https://github.com/webdev-desktop",
+    "linkedin": "https://linkedin.com/in/apurv-londhe",
+    "instagram": "https://instagram.com/apurv2003londhe"
+  }
+}

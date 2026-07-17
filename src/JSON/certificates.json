@@ -1,0 +1,67 @@
+[
+  {
+    "title": "TechSprint Hackathon",
+    "provider": "Google Developer Group On Campus",
+    "issueDate": "2025",
+    "status": "Participation",
+    "techKey": "github",
+    "pdfPath": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784278273/LOFI_Hackathon_2025.pdf",
+    "skillsLearned": [
+      "Problem Solving and Innovation",
+      "AI Tools and Productivity",
+      "Team Collaboration and Communication"
+    ]
+  },
+  {
+    "title": "IoT Based Smart Project",
+    "provider": "College Tech Fest (Technomania Association)",
+    "issueDate": "2024",
+    "status": "2nd Place Winner",
+    "techKey": "certificates",
+    "pdfPath": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784277660/Apurv_Certificate_in_Technomania_gunkqt.pdf",
+    "skillsLearned": [
+      "Arduino and Sensor Integration",
+      "Sensor Integration and Data Collection",
+      "IoT Project Development"
+    ]
+  },
+  {
+    "title": "CCC (Course on Computer Concepts)",
+    "provider": "ICIT Institute (NIELIT Authorized)",
+    "issueDate": "2024",
+    "status": "Certified",
+    "techKey": "certificates",
+    "pdfPath": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784277659/Apurv_CCC_Course_on_Computer_Concepts_g93fds.pdf",
+    "skillsLearned": [
+      "Computer Fundamentals",
+      "Operating System Basics",
+      "Internet and Digital Literacy"
+    ]
+  },
+  {
+    "title": "Certificate Course in Tally ERP 9",
+    "provider": "ICIT Institute",
+    "issueDate": "2024",
+    "status": "Certified",
+    "techKey": "briefcase",
+    "pdfPath": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784277660/Apurv_Certificate_Course_in_Tally_ERP_9_rvzpqm.pdf",
+    "skillsLearned": [
+      "Accounting and Bookkeeping",
+      "GST and Tax Management",
+      "Inventory and Voucher Management"
+    ]
+  },
+  {
+    "title": "Certificate Course in MS-Office",
+    "provider": "ICIT Institute",
+    "issueDate": "2024",
+    "status": "Certified",
+    "techKey": "briefcase",
+    "pdfPath": "https://res.cloudinary.com/wqudj3ub/image/upload/v1784273824/Apurv_Certificate_Course_in_MS-Office_edgzpm.pdf",
+    "skillsLearned": [
+      "Microsoft Word Document Creation",
+      "Microsoft Excel Functions",
+      "PowerPoint Presentation Design"
+    ]
+  }
+]
