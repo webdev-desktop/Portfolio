@@ -130,9 +130,8 @@ Then open a Pull Request 🚀
 
 **Apurv**
 
-🔗 [GitHub](https://github.com/webdev-desktop)
-
 🌐 [Portfolio](https://webdevzone.in)
+🔗 [GitHub](https://github.com/webdev-desktop)
 
 ---
 
