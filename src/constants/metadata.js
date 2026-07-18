@@ -21,6 +21,14 @@ const siteMetadata = {
     "Portfolio Website",
     "HTML CSS JavaScript",
     "Portfolio",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Next.js Portfolio",
+    "React Portfolio",
+    "Web Development",
+    "Frontend Portfolio",
+    "Full Stack Portfolio",
   ],
 
   verification: {
@@ -80,6 +88,12 @@ const siteMetadata = {
 
   alternates: {
     canonical: "https://webdevzone.in",
+  },
+
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "WebDevZone",
   },
 
   icons: {
