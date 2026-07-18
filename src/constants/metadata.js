@@ -23,6 +23,10 @@ const siteMetadata = {
     "Portfolio",
   ],
 
+  verification: {
+    google: "PXDPo7Tjic6nQRPUGDQ7jDgmnfbOi0a7voKsQTXivy8",
+  },
+
   authors: [
     {
       name: "Apurv",
