@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://webdevzone.in
+Sitemap: https://webdevzone.in/sitemap.xml
