@@ -1,4 +1,4 @@
-:HL["/_next/static/chunks/0mi5js8a7ws3f.css","style"]
+:HL["/_next/static/chunks/03xc4q78q-ad6.css","style"]
 :HL["/_next/static/media/1bc7fc94203521e3-s.p.0gm5xa07u9y0b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/216579b50e548914-s.p.1ay1jy0-bfc4a.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/media/3df2de83712245dd-s.p.0w014qgprzbql.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
@@ -16,4 +16,4 @@
 :HL["https://res.cloudinary.com/wqudj3ub/image/upload/v1783679633/project-preview_dlenmg.png","image"]
 :HL["https://res.cloudinary.com/wqudj3ub/image/upload/v1783687176/0e610fde-532f-44b6-9bef-0359ec46a224.png","image"]
 :HL["https://res.cloudinary.com/wqudj3ub/image/upload/v1783695525/project-preview_fqweis.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"all-projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"tf8HqyrPsKssgG2mHuikF"}
+0:{"tree":{"name":"","param":null,"prefetchHints":20,"slots":{"children":{"name":"projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"all-projects","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"M2HlmrXsXWWcpamuQKmkT"}
