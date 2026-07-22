@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import PageHeader from "@/components/UI/PageHeader";
 import WaterMark from "@/components/UI/WaterMark.jsx";
@@ -9,9 +9,11 @@ import profile from "@/JSON/profile.json";
 import FloatingInput from "@/components/UI/FloatingInput";
 import { fadeLeftRight, fadeRightLeft } from "@/components/UI/FadeEffects";
 import { useToast } from "@/components/UI/Toaster";
+import Button from "@/components/UI/Button";
+import LoadingState from "@/components/UI/LoadingState";
 
 export default function Contact() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = LoadingState();
   const [loading, setLoading] = useState(false);
   const [formStartTime] = useState(Date.now());
   const [website, setWebsite] = useState("");
@@ -22,10 +24,6 @@ export default function Contact() {
     email: "",
     message: "",
   });
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -203,24 +201,13 @@ export default function Contact() {
               </div>
 
               {/* Action Button */}
-              <div className="w-full flex flex-col justify-start mt-2 ">
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="group/btn flex items-center justify-center gap-3 disabled:pointer-events-none bg-brand-cyan hover:bg-brand-hover text-bg-primary font-ubuntu font-semibold text-[clamp(14px,1.6vw,16px)] px-[clamp(2rem,4vw,3rem)] py-[clamp(0.8rem,1.5vw,1.1rem)] rounded-xl shadow-[0_0_20px_rgba(18,247,214,0.2)] hover:shadow-[0_0_30px_rgba(18,247,214,0.45)] transition-all duration-300 hover:scale-[1.03] active:scale-[0.97] disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  {loading ? (
-                    <>
-                      <span>Sending...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Send Message</span>
-                      <PaperPlane className="w-[clamp(16px,1.8vw,20px)] h-[clamp(16px,1.8vw,20px)] transform group-hover/btn:translate-x-1 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
-                    </>
-                  )}
-                </button>
-              </div>
+              <Button
+                type="submit"
+                text="Send Message"
+                text2="Sending..."
+                icon={PaperPlane}
+                disabled={loading}
+              />
             </form>
           </div>
 

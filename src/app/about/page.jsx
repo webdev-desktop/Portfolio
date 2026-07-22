@@ -1,26 +1,19 @@
-"use client";
 import CodeTags from "@/components/UI/CodeTags.jsx";
 import WaterMark from "@/components/UI/WaterMark.jsx";
 import data from "@/JSON/profile.json";
-import { useEffect, useState } from "react";
-import { fadeDownUp, fadeLeftRight } from "@/components/UI/FadeEffects";
 
-export default function About() {
-  const [isVisible, setIsVisible] = useState(false);
+export const metadata = {
+  title: "About",
+};
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+export default async function About() {
   return (
     <section className="w-full max-w-7xl mx-auto flex-1 flex flex-col items-center justify-center relative overflow-hidden pt-2 px-[clamp(1rem,4.5vw,4rem)] max-lg:pt-3 min-[767px]:pl-[clamp(6rem,9vw,8rem)] max-[769px]:py-[clamp(4rem,10vw,7.5rem)]">
       <div className="w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-[clamp(2rem,6vw,5rem)] relative z-10">
         <WaterMark text={"About"} />
 
         {/* Left Side Content Column */}
-        <div
-          className={` flex-1 flex flex-col items-start w-full relative ${fadeLeftRight(isVisible)}`}
-        >
+        <div className="flex-1 flex flex-col items-start w-full relative fade-left">
           {/* 1. Header: About Me Box */}
           <div className="relative inline-block border-2 border-brand-cyan px-8 py-3 rounded-tl-3xl rounded-br-3xl hover:shadow-[0_0_35px_rgba(18,247,214,.35)] shadow-[0_0_15px_rgba(18,247,214,0.15)] bg-bg-primary mb-[clamp(1.5rem,4vw,3.5rem)] select-none transition-all hover:scale-105 duration-500">
             <h2 className="font-ubuntu font-normal text-[clamp(1.5rem,2.5vw,3rem)] tracking-wide text-white leading-none">
@@ -42,15 +35,11 @@ export default function About() {
               }}
             />
 
-            <h3
-              className={`font-h2-u text-brand-cyan font-bold tracking-wide group-hover:tracking-wider transition-all duration-500 text-[clamp(1.8rem,3vw,3.5rem)]  ${fadeDownUp(isVisible)}`}
-            >
+            <h3 className="font-h2-u text-brand-cyan font-bold tracking-wide group-hover:tracking-wider transition-all duration-500 text-[clamp(1.8rem,3vw,3.5rem)] fade-down">
               Hello!
             </h3>
 
-            <p
-              className={`font-mono text-[clamp(.8rem,.8vw+0.5rem,1.3rem)] leading-[1.9] text-text-dim font-light ${fadeDownUp(isVisible)}`}
-            >
+            <p className="font-mono text-[clamp(.8rem,.8vw+0.5rem,1.3rem)] leading-[1.9] text-text-dim font-light fade-down">
               {/* Opening Tag */}
               <CodeTags tag="p" />
 

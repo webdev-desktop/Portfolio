@@ -1,26 +1,19 @@
-"use client";
-import { fadeDownUp, fadeLeftRight } from "@/components/UI/FadeEffects";
 import PageHeader from "@/components/UI/PageHeader.jsx";
 import TechIcons from "@/components/UI/TechIcons.jsx";
 import WaterMark from "@/components/UI/WaterMark.jsx";
 import education from "@/JSON/education.json";
-import { useEffect, useState } from "react";
+
+export const metadata = {
+  title: "Education & Courses",
+};
 
 export default function Education() {
   const DefaultIcon = TechIcons["education"];
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   return (
     <>
       <WaterMark text={"Study"} />
-      <section
-        id="education"
-        className={`w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main  relative pb-5 max-[769px]:pb-[clamp(4rem,6vw,6rem)] px-[clamp(1rem,4.5vw,4rem)] min-[767px]:pl-[clamp(6rem,9vw,8rem)] select-none overflow-hidden ${fadeLeftRight(isVisible)}`}
-      >
+      <section className="w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main  relative pb-5 max-[769px]:pb-[clamp(4rem,6vw,6rem)] px-[clamp(1rem,4.5vw,4rem)] min-[767px]:pl-[clamp(6rem,9vw,8rem)] select-none overflow-hidden fade-left">
         <PageHeader
           title="Education"
           subtitle="My academic qualifications matrix, continuous historical timelines, and certified technical training credentials"
@@ -29,9 +22,7 @@ export default function Education() {
         {/* ==========================================================================
          PART 1: ACADEMIC EDUCATION VERTICAL TIMELINE TREE (CONTINUOUS AXIS ENGINE)
          ========================================================================== */}
-        <div
-          className={`max-w-4xl w-full mx-auto relative mt-[clamp(2.5rem,5vw,4rem)] pb-[clamp(2rem,4vw,3rem)] px-4 ${fadeDownUp(isVisible)}`}
-        >
+        <div className="max-w-4xl w-full mx-auto relative mt-[clamp(2.5rem,5vw,4rem)] pb-[clamp(2rem,4vw,3rem)] px-4 fade-down">
           <div className="absolute top-0 bottom-0 left-9 md:left-1/2 transform md:-translate-x-1/2 w-0.5 border-l-2 border-dashed border-brand-cyan/30 z-0" />
 
           <div className="flex flex-col w-full relative z-10 gap-[clamp(2rem,4vw,3.5rem)]">
@@ -92,9 +83,7 @@ export default function Education() {
          PART 2: SPECIALIZED COMPUTER TRAINING COURSES BRACKET
          ========================================================================== */}
         {education.coursesData && (
-          <div
-            className={`max-w-4xl w-full mx-auto mt-[clamp(2.5rem,5vw,4.5rem)] px-4 ${fadeDownUp(isVisible)}`}
-          >
+          <div className="max-w-4xl w-full mx-auto mt-[clamp(2.5rem,5vw,4.5rem)] px-4 fade-down">
             <div className="flex flex-col items-start mb-[clamp(1.5rem,3vw,2rem)] border-b border-white/5 pb-3">
               <h3 className="font-ubuntu text-[clamp(1.2rem,2.5vw,1.5rem)] text-brand-cyan font-medium tracking-wide flex items-center gap-2.5">
                 <span className="w-2 h-2 bg-brand-cyan rounded-full shadow-[0_0_8px_#12f7d6]" />

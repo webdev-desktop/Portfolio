@@ -1,16 +1,22 @@
 "use client";
 
-import React from "react";
 import { LuChevronsRight } from "react-icons/lu";
+import TechIcons from "./TechIcons";
 
 export default function Button({
   text,
+  text2,
   variant = "primary",
   icon: CustomIcon,
   marginClass = "",
   onClick,
   type = "button",
+  href,
+  disabled,
 }) {
+  const FileDownload = TechIcons["fileDownload"];
+  const ExternalLinkIcon = TechIcons["externalLink"];
+
   /* ==========================================================================
      ULTIMATE FLUID RESPONSIVE CLAMP SYSTEM (Navbar Uniformity Context)
      ========================================================================== */
@@ -44,21 +50,31 @@ export default function Button({
     "w-[clamp(1rem,2.8vw,1.35rem)] h-[clamp(1rem,2.8vw,1.35rem)] transition-transform duration-300 transform group-hover:translate-x-[clamp(2px,0.5vw,5px)]";
 
   return (
-    <button
-      type={type}
-      onClick={onClick}
-      className={`${baseStyles} ${variants[variant] || variants.primary} ${marginClass} text-[clamp(0.9rem,2.2vw,1.25rem)]`}
+    <a
+      href={href}
+      target={text === "All Projects" ? "" : "_blank"}
+      rel="noreferrer"
+      className="w-full btn-interactive flex justify-center items-center align-middle"
     >
-      <span className="whitespace-nowrap">{text}</span>
+      <button
+        type={type}
+        onClick={onClick}
+        disabled={disabled}
+        className={`${baseStyles} ${variants[variant] || variants.primary} ${marginClass} fade-down text-[clamp(0.9rem,2.2vw,1.25rem)]`}
+      >
+        <span className="whitespace-nowrap">{disabled ? text2 : text}</span>
 
-      {/* Dynamic Synced Icon System */}
-      {CustomIcon ? (
-        <span className={iconClasses}>
-          <CustomIcon className="w-full h-full" />
-        </span>
-      ) : (
-        <LuChevronsRight className={iconClasses} />
-      )}
-    </button>
+        {/* Dynamic Synced Icon System */}
+        {text === "Download CV" ? (
+          <FileDownload />
+        ) : text === "View Certificate PDF" ? (
+          <ExternalLinkIcon />
+        ) : CustomIcon ? (
+          <CustomIcon className={iconClasses} />
+        ) : (
+          <LuChevronsRight className={iconClasses} />
+        )}
+      </button>
+    </a>
   );
 }

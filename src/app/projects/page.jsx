@@ -1,30 +1,20 @@
 "use client";
 import Button from "@/components/UI/Button";
-import {
-  fadeDownUp,
-  fadeLeftRight,
-  projectDownUp,
-} from "@/components/UI/FadeEffects";
+import { projectDownUp } from "@/components/UI/FadeEffects";
 import NoProject from "@/components/UI/NoProject.jsx";
 import PageHeader from "@/components/UI/PageHeader.jsx";
 import TechIcons from "@/components/UI/TechIcons.jsx";
 import WaterMark from "@/components/UI/WaterMark.jsx";
 import projects from "@/JSON/projects.json";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Projects() {
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
   const [isProjectAnimating, setIsProjectAnimating] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
 
   const featuredProjects = projects.filter((project) => project.featured);
-  // console.log(featuredProjects);
-
   const activeProject = featuredProjects[currentProjectIndex] || null;
+
   // Safe navigation controls for carousel
   const nextProject = () => {
     if (isProjectAnimating || featuredProjects.length <= 1) return;
@@ -58,7 +48,7 @@ export default function Projects() {
       <WaterMark text={"Projects"} />
       <section
         id="projects"
-        className={`w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main relative px-[clamp(1rem,4.5vw,4rem)] pb-7 md:pl-[clamp(6rem,9vw,8rem)] max-[769px]:pb-[clamp(5rem,12vw,8.5rem)] select-none overflow-hidden ${fadeLeftRight(isVisible)}`}
+        className="w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main relative px-[clamp(1rem,4.5vw,4rem)] pb-7 md:pl-[clamp(6rem,9vw,8rem)] max-[769px]:pb-[clamp(5rem,12vw,8.5rem)] select-none overflow-hidden fade-left"
       >
         <PageHeader
           title="Projects"
@@ -69,9 +59,7 @@ export default function Projects() {
         <div
           className={`max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-[clamp(2.5rem,6vw,5rem)] mt-[clamp(2rem,5vw,4rem)] relative ${projectDownUp(isProjectAnimating)} `}
         >
-          <div
-            className={`w-full lg:w-[50%] flex justify-center items-center h-[clamp(280px,40vw,400px)] relative group select-none ${fadeDownUp(isVisible)}`}
-          >
+          <div className="w-full lg:w-[50%] flex justify-center items-center h-[clamp(280px,40vw,400px)] relative group select-none fade-down">
             {/* Dynamic Source Code Snippet Board */}
             <div className="absolute w-[80%] h-[85%] bg-[#121519]/95 border border-white/5 rounded-2xl shadow-2xl p-4 font-mono text-[clamp(10px,1.2vw,12px)] text-brand-cyan/70 overflow-hidden transition-all duration-500 ease-out -rotate-6 -translate-x-8 -translate-y-4 group-hover:-rotate-3 group-hover:-translate-x-12 group-hover:-translate-y-6 opacity-40 group-hover:opacity-75 group-hover:shadow-[0_0_30px_rgba(18,247,214,0.05)]">
               <div className="flex gap-1.5 mb-3 border-b border-white/5 pb-2">
@@ -108,9 +96,7 @@ export default function Projects() {
             </div>
           </div>
 
-          <div
-            className={`w-full lg:w-[45%] flex flex-col justify-center items-start min-h-80 ${fadeDownUp(isVisible)} `}
-          >
+          <div className="w-full lg:w-[45%] flex flex-col justify-center items-start min-h-80 fade-down">
             {/* Category Subtitle */}
             <span className="font-mono text-[clamp(11px,1.4vw,13px)] text-brand-cyan tracking-widest uppercase mb-1">
               {activeProject.subtitle}
@@ -219,12 +205,8 @@ export default function Projects() {
               </button>
             </div>
           )}
-          <a
-            href="/projects/all-projects"
-            className="flex items-center justify-center max-w-6xl mx-auto w-full"
-          >
-            <Button text="All Projects" />
-          </a>
+
+          <Button text="All Projects" href="/projects/all-projects" />
         </div>
       </section>
     </>

@@ -1,20 +1,14 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import PageHeader from "@/components/UI/PageHeader";
 import WaterMark from "@/components/UI/WaterMark";
 import TechIcons from "@/components/UI/TechIcons";
 import projectsData from "@/JSON/projects.json";
-import { fadeDownUp, fadeLeftRight } from "@/components/UI/FadeEffects";
 import skills from "@/JSON/skills.json";
 
+export const metadata = {
+  title: "All Projects",
+};
+
 export default function Projects() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   const GithubIcon = TechIcons["github"];
   const ExternalLinkIcon = TechIcons["externalLink"];
 
@@ -24,25 +18,21 @@ export default function Projects() {
 
       <section
         id="projects"
-        className={`w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main relative px-[clamp(1rem,4.5vw,4rem)] md:pl-[clamp(6rem,9vw,8rem)] max-[769px]:pb-[clamp(5rem,12vw,8.5rem)] pb-5 overflow-hidden ${fadeLeftRight(isVisible)}`}
+        className="w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main relative px-[clamp(1rem,4.5vw,4rem)] md:pl-[clamp(6rem,9vw,8rem)] max-[769px]:pb-[clamp(5rem,12vw,8.5rem)] pb-5 overflow-hidden fade-left"
       >
         <PageHeader
           title="All Projects"
           subtitle="Some things I've built while learning and experimenting with modern web technologies."
         />
 
-        <div
-          className={`w-full max-w-7xl mx-auto grid grid-cols-[repeat(auto-fit,minmax(clamp(260px,30vw,320px),1fr))] gap-[clamp(1.25rem,2.5vw,2rem)] mt-[clamp(2rem,4vw,3rem)] ${fadeDownUp(isVisible)}`}
-        >
+        <div className="w-full max-w-7xl mx-auto grid grid-cols-[repeat(auto-fit,minmax(clamp(260px,30vw,320px),1fr))] gap-[clamp(1.25rem,2.5vw,2rem)] mt-[clamp(2rem,4vw,3rem)] fade-down">
           {projectsData?.map((project) => (
             <div
               key={project?._id}
               className="group rounded-[clamp(1.25rem,2vw,1.875rem)] overflow-hidden border border-white/10 bg-[#1e252b]/80 backdrop-blur-md hover:border-brand-cyan/40 transition-all duration-300 hover:-translate-y-2"
             >
               {/* Project Preview */}
-              <div
-                className={`w-full p-[clamp(1rem,2vw,1.5rem)] flex justify-center items-center h-[clamp(220px,32vw,320px)] relative group select-none ${fadeDownUp(isVisible)}`}
-              >
+              <div className="w-full p-[clamp(1rem,2vw,1.5rem)] flex justify-center items-center h-[clamp(220px,32vw,320px)] relative group select-none fade-down">
                 {/* Code Snippet */}
                 <div className="absolute w-[80%] h-[85%] bg-[#121519]/95 border border-white/5 rounded-[clamp(1rem,2vw,1.5rem)] shadow-2xl p-[clamp(0.75rem,1.5vw,1rem)] font-mono text-[clamp(8px,0.9vw,11px)] text-brand-cyan/70 overflow-hidden transition-all duration-500 ease-out -rotate-6 -translate-x-6 -translate-y-3 group-hover:-rotate-3 group-hover:-translate-x-10 group-hover:-translate-y-5 opacity-40 group-hover:opacity-75">
                   <div className="flex gap-1.5 mb-3 border-b border-white/5 pb-2">

@@ -1,19 +1,14 @@
-"use client";
 import Button from "@/components/UI/Button";
 import PageHeader from "@/components/UI/PageHeader.jsx";
 import TechIcons from "@/components/UI/TechIcons.jsx";
 import WaterMark from "@/components/UI/WaterMark.jsx";
 import certificationsData from "@/JSON/certificates.json";
-import { useEffect, useState } from "react";
-import { fadeDownUp, fadeLeftRight } from "@/components/UI/FadeEffects";
+
+export const metadata = {
+  title: "Certificates",
+};
 
 export default function Certificates() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-  const ExternalLinkIcon = TechIcons["externalLink"];
   const VerifiedIcon = TechIcons["verified"];
   const DefaultCertIcon = TechIcons["certificates"];
 
@@ -22,7 +17,7 @@ export default function Certificates() {
       <WaterMark text={"Badge"} />
       <section
         id="certificates"
-        className={`w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main relative max-[769px]:pb-[clamp(3rem,6vw,6rem)] px-[clamp(1rem,4.5vw,4rem)] md:pl-[clamp(6rem,9vw,8rem)] select-none overflow-hidden ${fadeLeftRight(isVisible)}`}
+        className="w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main relative max-[769px]:pb-[clamp(3rem,6vw,6rem)] px-[clamp(1rem,4.5vw,4rem)] md:pl-[clamp(6rem,9vw,8rem)] select-none overflow-hidden fade-left"
       >
         <PageHeader
           title="Credentials"
@@ -30,9 +25,7 @@ export default function Certificates() {
         />
 
         {/* ⚡ FLEX WRAP RESPONSIVE ENGINE: Fits cards beautifully based on content width caps */}
-        <div
-          className={`max-w-6xl w-full mx-auto grid grid-cols-[repeat(auto-fit,minmax(clamp(260px,30vw,320px),1fr))] justify-items-center items-center gap-[clamp(1.5rem,3vw,2.5rem)] mt-[clamp(2rem,4vw,3.5rem)] pb-[clamp(3rem,5vw,5rem)] ${fadeDownUp(isVisible)}`}
-        >
+        <div className="max-w-6xl w-full mx-auto grid grid-cols-[repeat(auto-fit,minmax(clamp(260px,30vw,320px),1fr))] justify-items-center items-center gap-[clamp(1.5rem,3vw,2.5rem)] mt-[clamp(2rem,4vw,3.5rem)] pb-[clamp(3rem,5vw,5rem)] fade-down">
           {certificationsData.map((cert, index) => {
             const TargetBrandIcon = TechIcons[cert.techKey] || DefaultCertIcon;
 
@@ -99,17 +92,12 @@ export default function Certificates() {
                 </div>
 
                 {/* 📂 Card Bottom Action Trigger: Directly views or downloads the local Public PDF */}
-                <a
+
+                <Button
+                  text="View Certificate PDF"
                   href={cert.pdfPath}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full btn-interactive flex justify-center items-center align-middle"
-                >
-                  <Button
-                    text="View Certificate PDF"
-                    icon={ExternalLinkIcon}
-                  ></Button>
-                </a>
+                  variant="secondary"
+                />
               </div>
             );
           })}

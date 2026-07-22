@@ -1,30 +1,14 @@
-"use client";
-import Image from "next/image";
 import Button from "@/components/UI/Button.jsx";
 import CodeTags from "@/components/UI/CodeTags.jsx";
 import WaterMark from "@/components/UI/WaterMark.jsx";
 import TechIcons from "@/components/UI/TechIcons.jsx";
 import profile from "../JSON/profile.json";
 
-import { useEffect, useState } from "react";
-import {
-  fadeDownUp,
-  fadeLeftRight,
-  fadeRightLeft,
-} from "@/components/UI/FadeEffects";
-
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   const AtIcon = TechIcons["at"];
   const MailIcon = TechIcons["mail"];
   const LocationIcon = TechIcons["location"];
   const MobileIcon = TechIcons["mobile"];
-  const FileDownload = TechIcons["fileDownload"];
   const ExperienceIcon = TechIcons["seed"];
 
   const style = {
@@ -40,9 +24,7 @@ export default function Home() {
       <section className="text-text-main pt-2 flex-1 flex max-lg:pt-3 flex-col items-center justify-center relative overflow-hidden px-[clamp(1rem,4.5vw,4rem)] min-[767px]:pl-[clamp(6rem,9vw,8rem)] max-[767px]:py-[clamp(4rem,10vw,7.5rem)]">
         <div className="max-w-7xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-[clamp(1rem,4.5vw,4rem)] z-10">
           {/* LEFT COLUMN PROFILE CARD ELEMENT */}
-          <div
-            className={`relative w-full max-w-80 bg-[#1e252b] p-8 flex flex-col items-center border border-white/10 shadow-2xl rounded-tl-[100px] rounded-br-[100px] mb-[clamp(1.5rem,4vw,0rem)] lg:mb-0 transform hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,242,254,0.15)] group/card transition-all duration-700 ease-in-out ${fadeLeftRight(isVisible)}`}
-          >
+          <div className="relative w-full max-w-80 bg-[#1e252b] p-8 flex flex-col items-center border border-white/10 shadow-2xl rounded-tl-[100px] rounded-br-[100px] mb-[clamp(1.5rem,4vw,0rem)] lg:mb-0 transform hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(0,242,254,0.15)] group/card transition-all duration-700 ease-in-out fade-left">
             {/* Cyan Accent Border Line */}
             <div className="absolute inset-[0.1px] rounded-tl-[100px] rounded-br-[100px] border-t border-l border-[#00f2fe] pointer-events-none opacity-70 group-hover/card:opacity-100 transition-opacity duration-300" />
 
@@ -57,13 +39,13 @@ export default function Home() {
 
             {/* Name and Designation (Using Stagger effect based on visibility) */}
             <h2
-              className={`font-ubuntu font-normal text-[clamp(1.4rem,3vw,2rem)] tracking-wide text-white mb-1 text-center ${fadeDownUp(isVisible)} ${style.hover}`}
+              className={`font-ubuntu font-normal text-[clamp(1.4rem,3vw,2rem)] tracking-wide text-white mb-1 text-center fade-down ${style.hover}`}
             >
               {profile?.name?.split(" ")[0]}
             </h2>
 
             <p
-              className={`font-mono text-[clamp(0.7rem,1.4vw,0.9rem)] text-gray-400 mb-8 text-center font-light uppercase hover:tracking-wider ${fadeDownUp(isVisible)} ${style.hover}`}
+              className={`font-mono text-[clamp(0.7rem,1.4vw,0.9rem)] text-gray-400 mb-8 text-center font-light uppercase hover:tracking-wider fade-down ${style.hover}`}
             >
               {profile?.developerType} developer
             </p>
@@ -71,18 +53,14 @@ export default function Home() {
             {/* Info List */}
             <ul className="w-full flex flex-col gap-4 mb-6">
               <a href={`${profile?.socialLinks?.github}`} target="_blank">
-                <li
-                  className={`${style.li} ${style.hover} ${fadeDownUp(isVisible)}`}
-                >
+                <li className={`${style.li} ${style.hover} fade-down`}>
                   <AtIcon className={style.icon} />
                   <span>{profile?.name}</span>
                 </li>
               </a>
 
               <a href={`tel:+91${profile?.mobile}`}>
-                <li
-                  className={`${style.li} ${style.hover} ${fadeDownUp(isVisible)}`}
-                >
+                <li className={`${style.li} ${style.hover} fade-down`}>
                   <MobileIcon className={style.icon} />
                   <span>
                     +91 {profile?.mobile?.replace(/(\d{5})(\d{5})/, "$1 $2")}
@@ -91,9 +69,7 @@ export default function Home() {
               </a>
 
               <a href={`mailto:${profile?.email}`}>
-                <li
-                  className={`${style.li} ${style.hover} ${fadeDownUp(isVisible)}`}
-                >
+                <li className={`${style.li} ${style.hover} fade-down`}>
                   <MailIcon className={style.icon} />
                   <span>{profile?.email}</span>
                 </li>
@@ -104,38 +80,26 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <li
-                  className={`${style.li} ${style.hover} ${fadeDownUp(isVisible)}`}
-                >
+                <li className={`${style.li} ${style.hover} fade-down`}>
                   <LocationIcon className={style.icon} />
                   <span>{profile?.location}</span>
                 </li>
               </a>
 
-              <li
-                className={`${style.li} ${style.hover} ${fadeDownUp(isVisible)}`}
-              >
+              <li className={`${style.li} ${style.hover} fade-down`}>
                 <ExperienceIcon className={style.icon} />
                 <span>{profile?.experience}</span>
               </li>
             </ul>
 
             {/* Download CV Button */}
-            <a
-              href={profile?.resume}
-              download={`${profile?.name}_Resume.pdf`}
-              target="_blank"
-              className={`w-full block btn-interactive ${fadeDownUp(isVisible)}`}
-            >
-              <Button text="Download CV" icon={FileDownload} />
-            </a>
+
+            <Button text="Download CV" href={profile?.resume} />
           </div>
 
           {/* RIGHT COLUMN MAIN TYPOGRAPHY HEADER TEXT BLOCK */}
-          <div
-            className={`flex-1 flex flex-col items-start w-full relative ${fadeRightLeft(isVisible)}`}
-          >
-            <div className={`relative w-full mb-2 ${fadeDownUp(isVisible)}`}>
+          <div className="flex-1 flex flex-col items-start w-full relative fade-right">
+            <div className={`relative w-full mb-2 fade-down`}>
               <CodeTags tag={"h1"} />
               <h1
                 className={`font-ubuntu text-[clamp(1.9rem,6vw,5rem)] leading-[1.15] text-text-main pl-[clamp(0.4rem,1.8vw,1.5rem)]`}
@@ -152,7 +116,7 @@ export default function Home() {
               <CodeTags tag={"/h1"} />
             </div>
 
-            <div className={`relative w-full mb-1 ${fadeDownUp(isVisible)}`}>
+            <div className={`relative w-full mb-1 fade-down`}>
               <CodeTags tag={"p"} />
               <p className="font-ubuntu font-light text-[clamp(0.85rem,1.8vw,1.1rem)] leading-relaxed text-text-dim max-w-2xl pl-[clamp(0.4rem,1.8vw,1.5rem)]">
                 {profile?.bio}
@@ -162,7 +126,7 @@ export default function Home() {
 
             {/* Let's Talk Link */}
             <div
-              className={`pl-[clamp(0.4rem,1.8vw,1.5rem)] group transition-all duration-500 ease-out ${fadeDownUp(isVisible)}`}
+              className={`pl-[clamp(0.4rem,1.8vw,1.5rem)] group transition-all duration-500 ease-out fade-down`}
             >
               <a
                 href={`mailto:${profile?.email}`}

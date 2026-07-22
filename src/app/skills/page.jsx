@@ -1,24 +1,19 @@
-"use client";
-import { fadeDownUp, fadeLeftRight } from "@/components/UI/FadeEffects";
 import PageHeader from "@/components/UI/PageHeader.jsx";
 import TechIcons from "@/components/UI/TechIcons.jsx";
 import WaterMark from "@/components/UI/WaterMark.jsx";
 import skills from "@/JSON/skills.json";
-import { useEffect, useState } from "react";
 
-export default function Skills() {
-  const [isVisible, setIsVisible] = useState(false);
+export const metadata = {
+  title: "Skills",
+};
 
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
+export default async function Skills() {
   return (
     <>
       <WaterMark text={"Skill"} />
       <section
         id="skills"
-        className={`w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main relative pb-[clamp(5rem,6vw,6rem)] px-[clamp(1rem,4.5vw,4rem)] md:pl-[clamp(6rem,9vw,8rem)] ${fadeLeftRight(isVisible)}`}
+        className="w-full mx-auto flex-1 flex flex-col items-center justify-center text-text-main relative pb-[clamp(5rem,6vw,6rem)] px-[clamp(1rem,4.5vw,4rem)] md:pl-[clamp(6rem,9vw,8rem)] fade-left"
       >
         <PageHeader
           title="Skills"
@@ -26,9 +21,7 @@ export default function Skills() {
         />
 
         {/* Skills Layout Container */}
-        <div
-          className={`max-w-6xl w-full mx-auto flex flex-col gap-[clamp(2rem,4vw,3.5rem)] mt-[clamp(2rem,4vw,3.5rem)] ${fadeDownUp(isVisible)}`}
-        >
+        <div className="max-w-6xl w-full mx-auto flex flex-col gap-[clamp(2rem,4vw,3.5rem)] mt-[clamp(2rem,4vw,3.5rem)] fade-right">
           {/* Category 1: Front-end */}
           <Test
             title="Core Development & Architecture"
