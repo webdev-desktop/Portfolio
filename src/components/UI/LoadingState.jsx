@@ -8,6 +8,5 @@ export default function LoadingState() {
     setIsVisible(true);
   }, []);
 
-  console.log(isVisible);
   return isVisible;
 }
