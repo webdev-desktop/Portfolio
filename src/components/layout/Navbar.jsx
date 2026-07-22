@@ -1,13 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // ✅ Missing import
+import { usePathname } from "next/navigation";
 import TechIcons from "@/components/UI/TechIcons.jsx";
 import Tooltip from "../UI/Tooltip.jsx";
-import { fadeDownUp } from "../UI/FadeEffects.jsx";
 
 export default function Navbar() {
-  const pathname = usePathname(); // ✅ Current route detect karega
+  const pathname = usePathname();
 
   // Nav Links
   const navLinks = [
@@ -56,7 +55,7 @@ export default function Navbar() {
 
                 {/* Mobile Dot Indicator */}
                 <span
-                  className={`absolute bottom-[clamp(0.2rem,0.8vw,0.35rem)] left-1/2 -translate-x-1/2 w-[clamp(3px,0.8vw,5px)] h-[clamp(3px,0.8vw,5px)] bg-brand-cyan-light rounded-full ${fadeDownUp(isActive)}`}
+                  className={`absolute bottom-[clamp(0.2rem,0.8vw,0.35rem)] left-1/2 -translate-x-1/2 w-[clamp(3px,0.8vw,5px)] h-[clamp(3px,0.8vw,5px)] bg-brand-cyan-light rounded-full transition-all duration-700 ease-in-out ${isActive ? " opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
                 />
               </Link>
 

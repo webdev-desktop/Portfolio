@@ -1,6 +1,5 @@
 "use client";
 import Button from "@/components/UI/Button";
-import { projectDownUp } from "@/components/UI/FadeEffects";
 import NoProject from "@/components/UI/NoProject.jsx";
 import PageHeader from "@/components/UI/PageHeader.jsx";
 import TechIcons from "@/components/UI/TechIcons.jsx";
@@ -57,7 +56,7 @@ export default function Projects() {
 
         {/* Main Animated Carousel Display Frame */}
         <div
-          className={`max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-[clamp(2.5rem,6vw,5rem)] mt-[clamp(2rem,5vw,4rem)] relative ${projectDownUp(isProjectAnimating)} `}
+          className={`max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center justify-between gap-[clamp(2.5rem,6vw,5rem)] mt-[clamp(2rem,5vw,4rem)] relative ${isProjectAnimating ? "fade-project-down" : "fade-down"}`}
         >
           <div className="w-full lg:w-[50%] flex justify-center items-center h-[clamp(280px,40vw,400px)] relative group select-none fade-down">
             {/* Dynamic Source Code Snippet Board */}
@@ -184,7 +183,7 @@ export default function Projects() {
 
               <div className="font-mono text-[clamp(13px,1.6vw,15px)] text-brand-cyan font-medium tracking-widest px-2 min-w-14 text-center select-none">
                 <span
-                  className={`text-white font-bold ${projectDownUp(isProjectAnimating)}`}
+                  className={`text-white font-bold ${isProjectAnimating ? "fade-project-down" : "fade-down"} `}
                 >
                   {currentProjectIndex + 1}
                 </span>

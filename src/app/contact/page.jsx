@@ -7,13 +7,10 @@ import WaterMark from "@/components/UI/WaterMark.jsx";
 import TechIcons from "@/components/UI/TechIcons.jsx";
 import profile from "@/JSON/profile.json";
 import FloatingInput from "@/components/UI/FloatingInput";
-import { fadeLeftRight, fadeRightLeft } from "@/components/UI/FadeEffects";
 import { useToast } from "@/components/UI/Toaster";
 import Button from "@/components/UI/Button";
-import LoadingState from "@/components/UI/LoadingState";
 
 export default function Contact() {
-  const mounted = LoadingState();
   const [loading, setLoading] = useState(false);
   const [formStartTime] = useState(Date.now());
   const [website, setWebsite] = useState("");
@@ -125,18 +122,14 @@ export default function Contact() {
   return (
     <>
       <WaterMark text={"Contact Me !"} />
-      <section
-        className={`text-text-main flex flex-1 flex-col items-center justify-center relative pb-5 max-[770px]:pb-[clamp(4rem,10vw,7.5rem)] px-[clamp(1rem,4.5vw,4rem)] md:pl-[clamp(6rem,9vw,8rem)] select-none overflow-hidden capitalize ${fadeLeftRight(mounted)}`}
-      >
+      <section className="text-text-main flex flex-1 flex-col items-center justify-center relative pb-5 max-[770px]:pb-[clamp(4rem,10vw,7.5rem)] px-[clamp(1rem,4.5vw,4rem)] md:pl-[clamp(6rem,9vw,8rem)] select-none overflow-hidden capitalize fade-left">
         {/* Structural Entry Slide Header */}
         <PageHeader
           title="Contact"
           subtitle="I'm currently available for work"
         />
 
-        <div
-          className={`w-full flex justify-center mb-[clamp(1rem,2vw,3rem)] mt-[clamp(1rem,2vw,3rem)] ${fadeRightLeft(mounted)}`}
-        >
+        <div className="w-full flex justify-center mb-[clamp(1rem,2vw,3rem)] mt-[clamp(1rem,2vw,3rem)] fade-right">
           <div className="relative border border-brand-cyan/40 hover:border-brand-cyan px-[clamp(1.5rem,4vw,3.5rem)] py-[clamp(0.75rem,1.5vw,1.25rem)] rounded-tl-4xl rounded-br-4xl shadow-[0_0_25px_rgba(18,247,214,0.04)] hover:shadow-[0_0_30px_rgba(18,247,214,0.12)] bg-[#1e252b]/60 backdrop-blur-md transition-all duration-500">
             <h3 className="font-ubuntu font-medium text-[clamp(1.1rem,2.2vw,1.65rem)] text-brand-cyan tracking-wide">
               Get In Touch
@@ -147,9 +140,7 @@ export default function Contact() {
         {/* Main Structural Layout Matrix */}
         <div className="max-w-6xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-[clamp(2rem,4vw,3.5rem)] items-stretch">
           {/* Left Form Block Board */}
-          <div
-            className={`lg:col-span-7 bg-[#1e252b]/30 border border-white/10 rounded-4xl p-[clamp(1.5rem,4vw,3rem)] shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:border-white/20 backdrop-blur-md flex flex-col justify-between ${fadeLeftRight(mounted)}`}
-          >
+          <div className="lg:col-span-7 bg-[#1e252b]/30 border border-white/10 rounded-4xl p-[clamp(1.5rem,4vw,3rem)] shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:border-white/20 backdrop-blur-md flex flex-col justify-between fade-left">
             <form
               onSubmit={handleSubmit}
               className="w-full flex flex-col gap-[clamp(2.5rem,5vw,3.5rem)]"
@@ -212,13 +203,9 @@ export default function Contact() {
           </div>
 
           {/* Right Info & Map System */}
-          <div
-            className={`lg:col-span-5 flex flex-col gap-5 ${fadeRightLeft(mounted)}`}
-          >
+          <div className="lg:col-span-5 flex flex-col gap-5 fade-right">
             {/* Base Meta Element */}
-            <div
-              className={`bg-[#1e252b]/30 border border-white/10 hover:border-brand-cyan/30 rounded-2xl p-5 flex items-center gap-4 shadow-sm backdrop-blur-md transition-all duration-500 group/loc ${fadeRightLeft(mounted)}`}
-            >
+            <div className="bg-[#1e252b]/30 border border-white/10 hover:border-brand-cyan/30 rounded-2xl p-5 flex items-center gap-4 shadow-sm backdrop-blur-md transition-all duration-500 group/loc fade-right">
               <div className="w-10 h-10 rounded-xl bg-brand-cyan/10 flex items-center justify-center text-brand-cyan border border-brand-cyan/20 group-hover/loc:bg-brand-cyan group-hover/loc:text-bg-primary transition-all duration-300">
                 <Location className="w-5 h-5" />
               </div>
@@ -239,9 +226,7 @@ export default function Contact() {
             </div>
 
             {/* Interactive Map Block */}
-            <div
-              className={`w-full flex-1 min-h-80 rounded-4xl overflow-hidden border border-white/10 relative shadow-[0_15px_35px_rgba(0,0,0,0.3)] group/map hover:border-brand-cyan/40 ${fadeRightLeft(mounted)}`}
-            >
+            <div className="w-full flex-1 min-h-80 rounded-4xl overflow-hidden border border-white/10 relative shadow-[0_15px_35px_rgba(0,0,0,0.3)] group/map hover:border-brand-cyan/40 fade-right">
               <div className="absolute inset-0 bg-linear-to-t from-[#12161a]/90 via-[#1a1e23]/30 to-transparent opacity-60 group-hover/map:opacity-20 pointer-events-none z-10 transition-opacity duration-500" />
               <iframe
                 src={`https://www.google.com/maps?q=${encodeURIComponent(profile.location)}&output=embed`}

@@ -1,24 +1,12 @@
-"use client";
-
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import WaterMark from "@/components/UI/WaterMark";
-import { fadeDownUp, fadeLeftRight } from "@/components/UI/FadeEffects";
 
 export default function NotFound() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
   return (
     <>
       <WaterMark text="404" />
 
-      <section
-        className={`w-full h-fit flex flex-1 items-center justify-center overflow-hidden relative max-[769px]:py-[clamp(4rem,10vw,7.5rem)] px-[clamp(1rem,5vw,4rem)] ${fadeLeftRight(isVisible)}`}
-      >
+      <section className="w-full h-fit flex flex-1 items-center justify-center overflow-hidden relative max-[769px]:py-[clamp(4rem,10vw,7.5rem)] px-[clamp(1rem,5vw,4rem)] fade-left">
         {/* Background Glow */}
         <div className="absolute w-xl h-96 bg-brand-cyan/10 rounded-full blur-[180px]" />
 
@@ -35,7 +23,7 @@ export default function NotFound() {
           </div>
         </div>
 
-        <div className={`max-w-3xl text-center z-10 ${fadeDownUp(isVisible)}`}>
+        <div className="max-w-3xl text-center z-10 fade-down">
           {/* 404 */}
           <h1 className="font-ubuntu font-bold leading-none text-[clamp(6rem,20vw,12rem)] transition-all animate-float ease-out text-brand-cyan drop-shadow-[0_0_40px_rgba(18,247,214,0.25)]">
             404

@@ -21,7 +21,7 @@ export default async function Skills() {
         />
 
         {/* Skills Layout Container */}
-        <div className="max-w-6xl w-full mx-auto flex flex-col gap-[clamp(2rem,4vw,3.5rem)] mt-[clamp(2rem,4vw,3.5rem)] fade-right">
+        <div className="max-w-6xl w-full mx-auto flex flex-col gap-[clamp(2rem,4vw,3.5rem)] mt-[clamp(2rem,4vw,3.5rem)] fade-down">
           {/* Category 1: Front-end */}
           <Test
             title="Core Development & Architecture"
